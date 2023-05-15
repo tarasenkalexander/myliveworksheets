@@ -10,7 +10,7 @@
  * }
  * else if(post)
  * {
- *      Тупо отправляю в controllers/sheets/sheet.php
+ *      Отправляю в controllers/sheets/sheet.php с id нажатого щита
  * 
  * }
  * 
