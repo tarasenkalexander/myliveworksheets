@@ -3,6 +3,11 @@
 namespace System\Contracts;
 
 interface IRouter{
-	public function addRoute(string $url, string $contorllerName, string $contorllerMethod = 'index') : void;
+	public function addRoute(
+		string $url, 
+		string $controllerName, 
+		string $controllerMethod = 'index', 
+		?array $paramsMap = null) : void;
+
 	public function resolvePath(string $url) : array;
 }

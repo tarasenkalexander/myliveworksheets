@@ -26,10 +26,4 @@ class QuerySelect{
 	public function get() : array{
 		return $this->db->select($this->builder, $this->binds);
 	}
-
-	/* join, order ... */
-
-	/* public function __invoke(){
-		return $this->db->select($this->builder, $this->binds);
-	} */
 }

@@ -1,0 +1,89 @@
+<div class="container row d-flex justify-content-center mx-auto w-75">
+	<div class="col-md-12 d-flex justify-content-center border rounded w-75 mt-5 mb-5 mx-auto">
+		<div class="w-50">
+			<div class="col d-flex justify-content-center mt-5 mb-3">
+				<h2>Регистрация</h2>
+			</div>
+			<div class="row">
+				<form method="post">
+					<div class="form-outline">
+						<input type="email" class="form-control" name="email" value="{{fields.email}}" placeholder="Введите электронную почту"/>
+						<ul class="error-message">
+							{% for error in errors.email %}
+								<li>{{error}}</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="row">
+						<div class="d-flex form-outline col-md-5">
+							<input type="text" class="form-control" name="firstname" value="{{fields.firstname}}" placeholder="Введите имя"/>
+						</div>
+						<div class="d-flex form-outline col-md-7">
+							<input type="text" class="form-control" name="surname" value="{{fields.surname}}" placeholder="Введите фамилию"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="d-flex form-outline col-md-5">
+							<ul class="error-message">
+								{% for error in errors.firstname %}
+									<li>{{error}}</li>
+								{% endfor %}
+							</ul>
+						</div>
+						<div class="d-flex form-outline col-md-7">
+							<ul class="error-message">
+								{% for error in errors.surname %}
+									<li>{{error}}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+					<div class="form-outline">
+						<input type="text" class="form-control" name="patronymic" value="{{fields.patronymic}}" placeholder="Введите отчество (опционально)"/>
+						<ul class="error-message">
+							{% for error in errors.patronymic %}
+								<li>{{error}}</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="form-outline">
+						<input type="password" class="form-control" name="password" value="{{fields.password}}" placeholder="Введите пароль"/>
+						<ul class="error-message">
+							{% for error in errors.password %}
+								<li>{{error}}</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="form-outline mb-4">
+						<input type="password" class="form-control" name="confirmPassword" value="{{fields.confirmPassword}}" placeholder="Повторите пароль"/>
+						<ul class="error-message">
+							{% for error in errors.confirmPassword %}
+								<li>{{error}}</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="row mb-4">
+						<div class="col d-flex justify-content-start">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" name="isRemember" value="" id="isRemember" checked/>
+								<label class="form-check-label" for="isRemember">
+									Запомнить меня
+								</label>
+							</div>
+						</div>
+					</div>
+					<div>
+						<ul class="error-message">
+							{% for error in errors.common %}
+								<li>{{error}}</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="col-md-12">
+						<button class="btn btn-primary btn-block mb-5 w-100">Зарегистрироваться</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

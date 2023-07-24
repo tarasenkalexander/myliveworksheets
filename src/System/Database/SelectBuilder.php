@@ -44,6 +44,7 @@ class SelectBuilder{
 		return trim("SELECT $fields FROM {$this->table} $addon");
 	}
 
+	//для вызова limit и некоторых других параметров
 	public function __call($name, $args){
 		if(!array_key_exists($name, $this->addons)){
 			throw new Exception('sql error unknown');

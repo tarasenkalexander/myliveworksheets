@@ -1,0 +1,21 @@
+{
+    "name": "taras/myliveworksheets",
+    "description": "project to create lessons with tasks",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Taras\\Myliveworksheets\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "tarasenkalexander",
+            "email": "124238499+tarasenkalexander@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.6",
+        "respect/validation": "^2.2",
+        "monolog/monolog": "^3.4"
+    }
+}

@@ -27,10 +27,10 @@ class Template{
 	}
 
 	protected function __construct(){
-		$loader = new FilesystemLoader('Modules');
+		$loader = new FilesystemLoader('src/Views');
 		
 		$this->twig = new Environment($loader, [
-			'cache' => 'cache/twig',
+			'cache' => 'var/cache/twig',
 			'auto_reload' => true,
 			'autoescape' => false
 		]);
