@@ -46,23 +46,4 @@ class MonologLogger implements ILogger
     {
         $this->logger->debug($message, $context);
     }
-
-    //потестить, как логирует монолог
-
-
-    //private static $instance = null;
-
-    // private function __construct()
-    // {
-    //    $this->logger = new \Monolog\Logger("common logger");
-    // }
-
-    // public function getInstance()
-    // {
-    //     if (self::$instance == null) {
-    //         self::$instance = new MonologLogger();;
-    //     }
-
-    //     return self::$instance;
-    // }
 }

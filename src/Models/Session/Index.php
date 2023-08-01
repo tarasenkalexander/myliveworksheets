@@ -10,7 +10,6 @@ class Index extends Model {
 
     public function getByToken(string $token) : ?array
     {
-        // тут нужен WHERE? Может переделать SelectBuilder, если да?
         $result = $this->selector()->where('token=:token', ['token' => $token])->get(); 
         return $result[0] ?? null;
     }

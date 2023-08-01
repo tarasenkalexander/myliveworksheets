@@ -1,11 +1,49 @@
-<div>
-	<label for="file-selector" class="loadLabel" id="label-selector"></label>
-	<input type="file" id="file-selector" class="hide">
-</div>
-<p id="status"></p>
-<p id="progress"></p>
-<div>
-	<iframe id="output" src="" class="output-image" style="border:none"></iframe>
+<div class="container-fluid">
+	<div class="row flex-nowrap">
+		<div id="selectorBlock" class="mt-5">
+			<div class="w-100 col-12 d-flex justify-content-center">
+				<div class="selector-block p-5">
+					<label for="file-selector" class="loadLabel d-flex justify-content-center text-light align-items-center" id="label-selector">
+						Загрузка файла
+					</label>
+					<input type="file" id="file-selector" class="hide">
+				</div>
+			</div>
+		</div>
+		<div id="imageContainer" class="image-container col-md-10 mt-3 mb-5">
+			<div class="container-fluid">
+				<div class="row mb-3">
+					<div class="col-12 w-100 d-flex justify-content-center align-items-center">
+						<p class="mb-0">Название упражнения:</p>
+						<input type="text" name="title" class="ms-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 w-100 d-flex justify-content-center">
+						<img id="output" src="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="sidepanelFirst" class="col-md-2 col-xl-2 px-sm-2 px-0 bg-dark sidepanel mb-1 mt-1">
+			<div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+				<a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+					<span class="fs-5 d-none d-sm-inline">Menu</span>
+				</a>
+				<ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start align-items-sm-start" id="menu">
+					{# <li class="nav-item"> #}
+					{# <a href="#" class="nav-link align-middle px-0"> #}
+					{# <i class="fs-4 bi-house"></i> #}
+					{# <span class="ms-1 d-none d-sm-inline">Home</span> #}
+					{# </a> #}
+					{# </li> #}
+						<li class="nav-item"> <input type="text" class="input-draggable" id='input-draggable' draggable="true" disabled>
+					</li>
+				</ul>
+				<hr>
+			</div>
+		</div>
+	</div>
 </div>
 
 <script type="text/javascript" src="public/js/script.js"></script>

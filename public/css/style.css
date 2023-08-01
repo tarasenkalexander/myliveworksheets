@@ -1,5 +1,10 @@
 :root {
-    --main-bg-color: #888;
+    --main-bg-color: #eee;
+    --secondary-bg-color: #ddd;
+}
+
+body {
+    background-color: var(--main-bg-color);
 }
 
 .error-message {
@@ -15,20 +20,49 @@
     display: flex;
     width: 100%;
     height: 100%;
-    border: 5px dashed red;
-    background-color: #fff;
+    border: 5px dashed gray;
     outline: none;
-    width: 440px;
-    height: 272px;
+    width: 800px;
+    height: 350px;
 }
 
-.output-image {
-    height: 100%;
-    width: 100%;
-    display: block;
+.main-part{
+    min-height: 94.1vh;
+}
+
+.footer-part{
+    min-height: 5vh;
 }
 
 html,
 body {
     height: 100%;
+}
+
+.selector-block {
+    display: inline-flex;
+    background-color: #bbb;
+    font-size: 32pt;
+}
+
+.auth-form{
+    background-color: var(--secondary-bg-color);
+}
+
+.sidepanel {
+    display: none;
+}
+
+.image-container{
+    display: none;
+}
+
+.input-draggable{
+    width: 100%;
+    cursor: move;
+}
+
+.main-page{
+    font-size: 26pt;
+    color:#bbb
 }

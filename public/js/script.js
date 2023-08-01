@@ -1,9 +1,7 @@
 const fileSelector = document.getElementById('file-selector');
 const labelSelector = document.getElementById('label-selector');
 
-const status = document.getElementById("status");
 const output = document.getElementById("output");
-const progress = document.getElementById("progress");
 
 if (window.FileList && window.File && window.FileReader) {
     fileSelector.addEventListener('change', (event) => {
@@ -40,11 +38,32 @@ function onFilesUpload(file) {
         output.src = event.target.result;
     });
 
-    reader.addEventListener('progress', (event) => {
-        if (event.loaded && event.total) {
-            const percent = (event.loaded / event.total) * 100;
-            progress.textContent = "Progress:" + Math.round(percent);
-        }
-    });
     reader.readAsDataURL(file);
+
+    const selectorBlock = document.getElementById('selectorBlock');
+    selectorBlock.style.display = "none";
+    const imageContainer = document.getElementById('imageContainer');
+    imageContainer.style.display = "flex";
+
+    const sidepanelFirst = document.getElementById('sidepanelFirst');
+    sidepanelFirst.style.display = "flex";
 }
+
+const inputDraggable = document.getElementById('input-draggable');
+var createdInput;
+inputDraggable.addEventListener('dragstart', (event) => {
+    event.preventDefault();
+    createdInput = inputDraggable.cloneNode();
+    createdInput.classList.add('selected');
+});
+
+inputDraggable.addEventListener('drag', (event) => {
+    createdInput.style.left = event.pageX - createdInput.offsetWidth / 2 + 'px';
+    createdInput.style.top = event.pageY - createdInput.offsetHeight / 2 + 'px';
+})
+
+inputDraggable.addEventListener('dragend', (event) => {
+    alert('dragend');
+    event.preventDefault();
+    createdInput.classList.remove('selected');
+})
